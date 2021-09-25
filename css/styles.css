@@ -14,6 +14,8 @@
   --hero-text-color: #ffffff;
   --footer-logo-color: #ffffff;
   --button-hover-color: #188ce8;
+  --border-bottom-color: #ececec;
+  --border-cards-color: #eeeeee;
 }
 body {
   font-family: roboto, sans-serif;
@@ -44,6 +46,11 @@ ul {
 .list {
   list-style: none;
 }
+.container {
+  width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
 
 /* скрытые заголовки */
 .section-title {
@@ -57,7 +64,35 @@ ul {
 /* верхняя строка */
 .header {
   background-color: var(--header-background-color);
+  border-bottom: 1px solid var(--border-bottom-color);
 }
+
+.header > .container {
+  display: flex;
+  justify-content: space-between;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 24px;
+  padding-bottom: 25px;
+}
+
+.header-navigation {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start
+}
+
+
+.header-list,
+.header-contacts {
+  display: flex;
+}
+
+.header-list-item:not(:first-child),
+.header-contacts-item:not(:first-child) {
+  margin-left: 50px;
+}
+
 .header-logo,
 .footer-logo {
   font-family: Raleway;
@@ -79,10 +114,14 @@ ul {
   font-size: 14px;
   line-height: calc(16 / 14);
   letter-spacing: 0.02em;
+
+  margin-left: 93px;
+  margin-left: not:(first-child:) 50px;
 }
 
 .header-link {
   color: var(--primary-title-color);
+  
 }
 
 .header-contacts .header-link {
@@ -103,7 +142,16 @@ ul {
 .hero {
   background-color: var(--hero-background-color);
 }
+
+.hero-container {
+  padding: 200px 252px;
+}
+
 .hero-title {
+  margin-bottom: 30px;
+
+  color: var(--hero-text-color);
+
   font-style: normal;
   font-weight: 900;
   font-size: 44px;
@@ -111,13 +159,19 @@ ul {
   text-align: center;
   letter-spacing: 0.06em;
   text-transform: uppercase;
-  color: var(--hero-text-color);
 }
 .hero-button {
+  background-color: var(--accent-color);
+  color: var(--hero-text-color);
+
+  border-radius: 4px;
+  padding: 10px 32px;
+  margin-right: auto;
+  margin-left: auto;
+
   font-family: inherit;
   border: none;
   outline: none;
-  background-color: var(--accent-color);
   font-style: normal;
   font-weight: bold;
   font-size: 16px;
@@ -126,14 +180,31 @@ ul {
   align-items: center;
   text-align: center;
   letter-spacing: 0.06em;
-  color: var(--hero-text-color);
 }
 
 .hero-button:hover,
 .hero-button:focus {
   background-color: var(--button-hover-color);
 }
+
 /* направления роботы */
+.direction-container {
+   display: flex;
+  padding: 94px 15px;
+}
+
+.direction-list {
+display: flex;
+}
+
+.direction-lis {
+  width: 270px;
+}
+
+.direction-lis:not(:first-child) {
+margin-left: 30px;
+}
+
 .direction-title {
   font-style: normal;
   font-weight: bold;
@@ -145,6 +216,7 @@ ul {
 }
 
 .direction-text {
+  margin-top: 10px;
   font-style: normal;
   font-weight: normal;
   font-size: 14px;
@@ -153,16 +225,39 @@ ul {
   color: var(--primary-text-color);
 }
 
+/* Чем мы занимаемся */
+.occupation {
+  padding-bottom: 94px;
+}
+
 .occupation-title {
   font-style: normal;
   font-weight: bold;
   font-size: 36px;
   line-height: calc(42 / 36);
   letter-spacing: 0.03em;
+  
   color: var(--primary-title-color);
+  
+  text-align: center;
+  margin-bottom: 50px;
 }
-/* команда студии */
 
+.occupation-item:not(:first-child) {
+  margin-left: 30px;
+
+}
+
+.occupation-list {
+  display: flex;
+  }
+
+/* команда студии */
+.team {
+  background-color:var(--command-background-color);
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
 .team-title {
   font-style: normal;
   font-weight: bold;
@@ -170,10 +265,26 @@ ul {
   line-height: 42px;
   letter-spacing: 0.03em;
   color: var(--primary-title-color);
+
+  text-align: center; 
+  margin-bottom: 50px;
+}
+
+.team-list {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .team-list-card {
-  background-color: var(--command-background-color);
+  background-color: var(--secondary-title-color);
+  border-radius: 4px;
+
+    text-align: center;
+padding-bottom: 30px;
+}
+.team-card-photo {
+  margin-bottom: 30px;
 }
 
 .team-card-header {
@@ -183,6 +294,8 @@ ul {
   line-height: calc(19 / 16);
   letter-spacing: 0.03em;
   color: var(--primary-title-color);
+
+  margin-bottom: 10px;
 }
 
 .team-card-occupation {
@@ -196,7 +309,17 @@ ul {
 /* подвал */
 .footer {
   background-color: var(--footer-background-color);
-}
+  }
+
+  .footer > .container {
+    justify-content: space-between;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 24px;
+  padding-bottom: 25px; 
+    padding: 60px auto 60px 15px;
+  }
+
 .footer-logo {
   font-family: Raleway;
   font-style: normal;
@@ -205,6 +328,8 @@ ul {
   line-height: calc(31 / 26);
   letter-spacing: 0.03em;
   color: var(--footer-logo-color);
+
+  margin-bottom: 20px;
 }
 .street {
   all: initial;
@@ -235,13 +360,31 @@ ul {
 }
 
 /* фильтр */
-
 .portfolio-section {
   background: var(--secondary-title-color);
 }
+
+.container {
+    padding-top: 94px;
+}
+
+.portfolio-section > .works-container {
+    padding-bottom: 94px;
+}
+
+.portfolio-filter {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+  }
+
+
+
 .portfolio-button {
   font-family: inherit;
   border: none;
+  border-radius: 4px;
+  padding: 6, 22, 6, 22;
   outline: none;
   background-color: var(--command-background-color);
   font-style: normal;
@@ -251,6 +394,10 @@ ul {
   text-align: center;
   letter-spacing: 0.03em;
   color: var(--primary-title-color);
+}
+
+.portfolio-list-item:not(:first-child) {
+  margin-left: 8px;
 }
 
 .portfolio-button:hover,
@@ -264,7 +411,37 @@ ul {
   cursor: pointer;
 }
 
+.portfolio-list-item > .portfolio-button {
+  padding: 6px 22px;
+}
 /* наши работы */
+.works {
+    display: flex;
+  margin-top: -30px;
+  margin-left: -30px;
+    flex-wrap: wrap;
+}
+
+.works-container {
+padding-top: 0px;
+}
+
+.works-list-item {
+  border: 1px solid var(--border-cards-color);
+  flex-basis: calc(100% / 3 - 30px);
+  margin-left: 30px;
+  margin-top: 30px;
+  }
+
+
+  .works-list-item:nth-child(n + 3) {
+    margin-right: 0;
+    }
+
+    .works-list-item:nth-last-child(-n + 3) {
+    margin-right: 0;
+    }
+
 .works-header {
   font-style: normal;
   font-weight: bold;
