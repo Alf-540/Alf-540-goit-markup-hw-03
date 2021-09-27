@@ -75,14 +75,12 @@ ul {
   display: flex;
   justify-content: space-between;
 }
-  
 
 .header-navigation {
   display: flex;
   align-items: center;
-  justify-content: flex-start
+  justify-content: flex-start;
 }
-
 
 .header-list,
 .header-contacts {
@@ -115,14 +113,11 @@ ul {
   font-size: 14px;
   line-height: calc(16 / 14);
   letter-spacing: 0.02em;
-
   margin-left: 93px;
-  margin-left: not:(first-child:) 50px;
 }
 
 .header-link {
   color: var(--primary-title-color);
-  
 }
 
 .header-contacts .header-link {
@@ -142,19 +137,16 @@ ul {
 /* герой */
 .hero {
   background-color: var(--hero-background-color);
-padding-top: 200px;
-padding-bottom: 200px;
+  padding-top: 200px;
+  padding-bottom: 200px;
   justify-content: center;
-
 }
-
 
 .hero-title {
   margin-bottom: 30px;
   max-width: 696px;
   margin-left: auto;
   margin-right: auto;
-
 
   color: var(--hero-text-color);
 
@@ -195,16 +187,15 @@ padding-bottom: 200px;
 
 /* направления роботы */
 .direction {
-    padding: 94px 15px;
-
+  padding: 94px 0px;
 }
 
 .direction-container {
-   display: flex;
+  display: flex;
 }
 
 .direction-list {
-display: flex;
+  display: flex;
 }
 
 .direction-lis {
@@ -212,7 +203,7 @@ display: flex;
 }
 
 .direction-lis:not(:first-child) {
-margin-left: 30px;
+  margin-left: 30px;
 }
 
 .direction-title {
@@ -248,27 +239,26 @@ margin-left: 30px;
   font-size: 36px;
   line-height: calc(42 / 36);
   letter-spacing: 0.03em;
-  
+
   color: var(--primary-title-color);
-  
+
   text-align: center;
   margin-bottom: 50px;
 }
 
 .occupation-item:not(:first-child) {
   margin-left: 30px;
-
 }
 
 .occupation-list {
   display: flex;
-  }
+}
 
 /* команда студии */
 .team {
-  background-color:var(--command-background-color);
-  padding: 94px 0px  ;
-  }
+  background-color: var(--command-background-color);
+  padding: 94px 0px;
+}
 .team-title {
   font-style: normal;
   font-weight: bold;
@@ -277,22 +267,28 @@ margin-left: 30px;
   letter-spacing: 0.03em;
   color: var(--primary-title-color);
 
-  text-align: center; 
+  text-align: center;
   margin-bottom: 50px;
 }
 
 .team-list {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+
+  flex-wrap: wrap;
+  margin-left: -30px;
+  margin-top: -30px;
 }
 
 .team-list-card {
   background-color: var(--secondary-title-color);
   border-radius: 4px;
 
-    text-align: center;
-padding-bottom: 30px;
+  text-align: center;
+  padding-bottom: 30px;
+  flex-basis: calc(100% / 4 - 30px);
+  margin-left: 30px;
+  margin-top: 30px;
 }
 .team-card-photo {
   margin-bottom: 30px;
@@ -323,33 +319,28 @@ padding-bottom: 30px;
   padding: 60px 0px;
 }
 
-  .footer > .container {
-    justify-content: space-between;
-      }
-
 .footer-logo {
   font-family: Raleway;
   font-style: normal;
-  font-weight: bold;
+  font-weight: 400;
   font-size: 26px;
   line-height: calc(31 / 26);
   letter-spacing: 0.03em;
   color: var(--footer-logo-color);
-
-  margin-bottom: 20px;
 }
 
+.logo-text {
+  margin-bottom: 20px;
+}
 .street {
-    all: initial;
-    font-family: roboto, sans-serif;
+  all: initial;
+  font-family: roboto, sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 14px;
-  line-height: 1.71;
+  line-height: calc(24 / 14);
   letter-spacing: 0.03em;
   color: var(--footer-logo-color);
-
-  margin-bottom: 9px;
 }
 
 .street:hover,
@@ -366,26 +357,29 @@ padding-bottom: 30px;
   color: var(--secondary-text-color);
 }
 
+.footer-mail {
+  margin-top: 9px;
+  margin-bottom: 9px;
+}
+
 /* фильтр */
 .portfolio-section {
   background: var(--secondary-title-color);
-    padding-top: 94px;
-    padding-bottom: 94px;
+  padding-top: 94px;
+  padding-bottom: 94px;
 }
 
 .portfolio-filter {
   display: flex;
   justify-content: center;
   margin-bottom: 50px;
-  }
-
-
+}
 
 .portfolio-button {
   font-family: inherit;
   border: none;
   border-radius: 4px;
-  padding: 6, 22, 6, 22;
+  padding: 6px 22px;
   outline: none;
   background-color: var(--command-background-color);
   font-style: normal;
@@ -417,31 +411,35 @@ padding-bottom: 30px;
 }
 /* наши работы */
 .works {
-    display: flex;
+  display: flex;
   margin-top: -30px;
   margin-left: -30px;
-    flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.portfolio-img {
+  display: block;
 }
 
 .works-list-item {
   flex-basis: calc((100% / 3) - 30px);
   margin-left: 30px;
   margin-top: 30px;
-  }
-
-.project-name-description {
-border: 1px solid var(--border-cards-color);
-border-top: none;
 }
 
+.project-name-description {
+  border: 1px solid var(--border-cards-color);
+  border-top: none;
+  padding: 20px 24px;
+}
 
-  .works-list-item:nth-child(n + 3) {
-    margin-right: 0;
-    }
+.works-list-item:nth-child(n + 3) {
+  margin-right: 0;
+}
 
-    .works-list-item:nth-last-child(-n + 3) {
-    margin-right: 0;
-    }
+.works-list-item:nth-last-child(-n + 3) {
+  margin-right: 0;
+}
 
 .works-header {
   font-style: normal;
@@ -450,9 +448,6 @@ border-top: none;
   line-height: calc(36 / 18);
   letter-spacing: 0.06em;
   color: var(--primary-title-color);
-
-  margin-left: 24px;
-  margin-bottom: 4px;
 }
 
 .works-text {
@@ -462,7 +457,4 @@ border-top: none;
   line-height: calc(30 / 16);
   letter-spacing: 0.03em;
   color: var(--primary-text-color);
-
-   margin-left: 24px;
-  margin-bottom: 20px;
 }
